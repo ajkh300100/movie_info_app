@@ -7,6 +7,7 @@ TMDB API를 기반으로 하는 Flutter 영화 정보 앱입니다.
 
 ## 프로젝트 구조
 
+```plaintext
 lib/
 ├── data/                    # 외부 데이터 통신 (TMDB API) 및 DTO 관리
 │   ├── datasources/         # API 요청 인터페이스 및 구현체
@@ -40,7 +41,6 @@ lib/
 │   └── movie_image_card.dart                # 카드 UI
 │
 └── main.dart                                # 앱 시작점
-
 
 ---
 

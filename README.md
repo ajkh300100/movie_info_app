@@ -41,10 +41,10 @@ lib/
 │   └── movie_image_card.dart                # 카드 UI
 │
 └── main.dart                                # 앱 시작점
+```
 
 ---
-
-## 기술 스택
+# 기술 스택
 Flutter (3.x 이상)
 
 Provider (상태관리)

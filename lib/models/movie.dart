@@ -1,8 +1,27 @@
+class Genre {
+  final int id;
+  final String name;
+
+  Genre({
+    required this.id,
+    required this.name,
+  });
+
+  factory Genre.fromJson(Map<String, dynamic> json) {
+    return Genre(
+      id: json['id'] ?? 0,
+      name: json['name'] ?? '장르 없음',
+    );
+  }
+}
+
 class Movie {
   final int id;
   final String title;
   final String posterPath;
   final String releaseDate;
+  final int? runtime;                  // 러닝타임(분)
+  final List<Genre> genres;            // 장르 리스트
   final String overview;
   final String tagline;
   final double voteAverage;
@@ -17,6 +36,8 @@ class Movie {
     required this.title,
     required this.posterPath,
     required this.releaseDate,
+    this.runtime,
+    required this.genres,
     required this.overview,
     required this.tagline,
     required this.voteAverage,
@@ -33,11 +54,16 @@ class Movie {
         .map((companyJson) => ProductionCompany.fromJson(companyJson))
         .toList();
 
+    var genresJson = json['genres'] as List? ?? [];
+    List<Genre> genres = genresJson.map((g) => Genre.fromJson(g)).toList();
+
     return Movie(
       id: json['id'] ?? 0,
       title: json['title'] ?? '제목 없음',
       posterPath: json['poster_path'] ?? '',
       releaseDate: json['release_date'] ?? '',
+      runtime: json['runtime'],
+      genres: genres,
       overview: json['overview'] ?? '',
       tagline: json['tagline'] ?? '',
       voteAverage: (json['vote_average'] ?? 0).toDouble(),

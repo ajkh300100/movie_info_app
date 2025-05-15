@@ -52,13 +52,13 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(16),
                           child: Image.network(
                             '$imageBaseUrl${movieProvider.popularMovies[0].posterPath}',
-                            height: 250,
+                            height: 600,
                             width: double.infinity,
                             fit: BoxFit.cover,
                             loadingBuilder: (context, child, progress) {
                               if (progress == null) return child;
                               return SizedBox(
-                                height: 250,
+                                height: 600,
                                 child: Center(
                                   child: CircularProgressIndicator(
                                     value: progress.expectedTotalBytes != null
@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
                             },
                             errorBuilder: (context, error, stack) {
                               return const SizedBox(
-                                height: 250,
+                                height: 600,
                                 child: Center(
                                   child: Icon(Icons.broken_image, size: 64, color: Colors.grey),
                                 ),

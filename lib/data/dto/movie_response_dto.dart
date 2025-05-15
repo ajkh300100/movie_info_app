@@ -1,5 +1,3 @@
-// lib/data/dto/movie_response_dto.dart
-
 class MovieResponseDto {
   final int id;
   final String title;

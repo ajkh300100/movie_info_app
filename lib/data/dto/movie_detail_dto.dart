@@ -1,5 +1,3 @@
-// lib/data/dto/movie_detail_dto.dart
-
 class MovieDetailDto {
   final int id;
   final String title;

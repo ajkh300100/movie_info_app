@@ -9,7 +9,7 @@ class MovieApiService {
   final String? _token = dotenv.env['TMDB_V4_ACCESS_TOKEN'];
 
   Map<String, String> get _headers {
-    if (_token == null || _token!.isEmpty) {
+    if (_token == null || _token.isEmpty) {
       throw Exception('TMDB V4 Access Token이 설정되지 않았습니다. .env 파일을 확인하세요.');
     }
     return {

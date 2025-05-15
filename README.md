@@ -45,7 +45,7 @@ lib/
 
 ---
 # 기술 스택
-Flutter (3.x 이상)
+Flutter (3.7 이상)
 
 Provider (상태관리)
 

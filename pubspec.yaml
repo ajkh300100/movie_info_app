@@ -1,0 +1,23 @@
+name: movie_info_app
+description: A new Flutter project
+
+publish_to: 'none' # Remove this line if you want to publish your app
+
+environment:
+  sdk: ">=3.7.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.3
+  http: ^1.4.0
+  flutter_dotenv: ^5.0.2  # dotenv 패키지 추가
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
